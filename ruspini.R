@@ -8,8 +8,8 @@ ruspini_scaled <- scale(ruspini)
 plot(ruspini_scaled)
 
 #The K-means algorithm is used on the data below. k is set to four because it seems like there are four clusters when looking at the scatter plot for the previous data.
-ruspiniKM = kmeans(ruspini_scaled, 4)
-colors = c("red", "green", "orange", "blue")
+ruspiniKM = kmeans(ruspini_scaled, centers=4, nstart=10)
+colors = c("red", "green", "orange", "blue","black")
 #plot(ruspini[,1:2], pch = 19, col = colors[ruspiniKM$cluster])
 
 
